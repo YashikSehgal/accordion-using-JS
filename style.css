@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: "Ancizar Serif", serif;
+    
+}
+
+.accordion{
+    width: 80%;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg,rgba(88, 186, 224, 1) 0%, rgba(207, 255, 226, 1) 28%, rgba(232, 218, 88, 1) 100%);
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #F4FFCF;
+
+    &:after{
+        content: "\02795";
+        position: absolute;
+        right: 1rem;
+    }
+}
+
+.accordion:active, .active{
+    transform: scale(0.99);
+    transition: all 0.2s ease;
+    background: linear-gradient(90deg,rgba(88, 186, 224, 1) 0%, rgba(244, 255, 207, 1) 0%, rgba(232, 218, 88, 1) 100%);
+}
+
+.active:after{
+    content: "\02796";
+    position: absolute;
+    right: 1rem;
+}
+
+
+
+.panel{
+    width: 80%;
+    padding: 20px;
+     margin: 0 auto;
+    font-size: 2.5rem;
+    display: none;
+    background: linear-gradient(90deg,rgba(246, 255, 143, 1) 0%, rgba(255, 251, 217, 1) 100%);
+    border: 3px solid #F4FFCF;
+    border-radius: 2rem;
+}
